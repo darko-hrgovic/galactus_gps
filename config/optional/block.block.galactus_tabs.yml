@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - galactus
-id: galactus_tabs
-theme: galactus
+    - galactus_gps
+id: galactus_gps_tabs
+theme: galactus_gps
 region: content
 weight: -2
 provider: null

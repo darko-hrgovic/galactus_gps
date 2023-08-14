@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - galactus
-id: galactus_breadcrumbs
-theme: galactus
+    - galactus_gps
+id: galactus_gps_breadcrumbs
+theme: galactus_gps
 region: breadcrumb
 weight: -2
 provider: null

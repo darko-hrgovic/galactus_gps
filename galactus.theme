@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the galactus theme.
+ * Functions to support theming in the galactus_gps theme.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -11,7 +11,7 @@ use Drupal\views\Form\ViewsForm;
 /**
  * Implements hook_page_attachments_alter().
  */
-function galactus_page_attachments_alter(array &$page) {
+function galactus_gps_page_attachments_alter(array &$page) {
   $clf_source = theme_get_setting('clf_source');
   $use_minimal_clf = theme_get_setting('clf_override');
   $clf_theme_color = theme_get_setting('clf_theme_colour');
@@ -26,14 +26,14 @@ function galactus_page_attachments_alter(array &$page) {
 
   // Switch between minimal and full CLF libraries.
   if ($clf_source == 'min' || $use_minimal_clf) {
-    $page['#attached']['library'][] = 'galactus/clf-' . $clf_layout_id . '-' . $clf_theme_color;
+    $page['#attached']['library'][] = 'galactus_gps/clf-' . $clf_layout_id . '-' . $clf_theme_color;
   }
   elseif ($clf_source == 'local') {
-    $page['#attached']['library'][] = 'galactus/clf-local';
+    $page['#attached']['library'][] = 'galactus_gps/clf-local';
   }
   else {
     // Use full CLF library.
-    $page['#attached']['library'][] = 'galactus/clf-cdn-fw-' . $clf_theme_color;
+    $page['#attached']['library'][] = 'galactus_gps/clf-cdn-fw-' . $clf_theme_color;
   }
 }
 
@@ -42,7 +42,7 @@ function galactus_page_attachments_alter(array &$page) {
  *
  * Adds body classes if certain regions have content.
  */
-function galactus_preprocess_html(&$variables) {
+function galactus_gps_preprocess_html(&$variables) {
 
   // Add in custom theme variables so they are available in html.twig.
   $variables['color_option'] = theme_get_setting('clf_theme_colour');
@@ -170,12 +170,12 @@ function galactus_preprocess_html(&$variables) {
   // Add sticky class and library.
   if (theme_get_setting('clf_navigation_sticky') == TRUE) {
     $variables['attributes']['class'][] = 'clf-navigation-sticky';
-    $variables['#attached']['library'][] = 'galactus/clf-sticky-navigation';
+    $variables['#attached']['library'][] = 'galactus_gps/clf-sticky-navigation';
   }
   // Add secondary navigation class and library.
   if (theme_get_setting('clf_secondarynavoption') == TRUE) {
     $variables['attributes']['class'][] = 'clf-navigation-secondary';
-    $variables['#attached']['library'][] = 'galactus/clf-secondary-navigation';
+    $variables['#attached']['library'][] = 'galactus_gps/clf-secondary-navigation';
   }
 
   // Add navigation class and library.
@@ -185,20 +185,20 @@ function galactus_preprocess_html(&$variables) {
   }
   else {
     $variables['attributes']['class'][] = 'clf-navigation-slidein';
-    $variables['#attached']['library'][] = 'galactus/clf-slidein-navigation';
+    $variables['#attached']['library'][] = 'galactus_gps/clf-slidein-navigation';
   }
 
   // Add Whitney library if set.
   if (theme_get_setting('clf_use_whitney') == 'dev') {
-    $variables['#attached']['library'][] = 'galactus/clf-whitney-dev';
+    $variables['#attached']['library'][] = 'galactus_gps/clf-whitney-dev';
   }
   if (theme_get_setting('clf_use_whitney') == 'prod') {
-    $variables['#attached']['library'][] = 'galactus/clf-whitney-prod';
+    $variables['#attached']['library'][] = 'galactus_gps/clf-whitney-prod';
   }
 
   // Add Fontawesome library if set.
   if (theme_get_setting('clf_fontawesome') == TRUE) {
-    $variables['#attached']['library'][] = 'galactus/clf-fontawesome';
+    $variables['#attached']['library'][] = 'galactus_gps/clf-fontawesome';
   }
 
   // Add a class to define the active CLF theme colour
@@ -210,7 +210,7 @@ function galactus_preprocess_html(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for page templates.
  */
-function galactus_preprocess_page(&$variables) {
+function galactus_gps_preprocess_page(&$variables) {
   // Since the title and the shortcut link are both block level elements,
   // positioning them next to each other is much simpler with a wrapper div.
   if (!empty($variables['title_suffix']['add_or_remove_shortcut']) && $variables['title']) {
@@ -297,7 +297,7 @@ function galactus_preprocess_page(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for maintenance-page.html.twig.
  */
-function galactus_preprocess_maintenance_page(&$variables) {
+function galactus_gps_preprocess_maintenance_page(&$variables) {
   // By default, site_name is set to Drupal if no db connection is available
   // or during site installation. Setting site_name to an empty string makes
   // the site and update pages look cleaner.
@@ -307,13 +307,13 @@ function galactus_preprocess_maintenance_page(&$variables) {
   }
 
   // Galactus has custom styling for the maintenance page.
-  $variables['#attached']['library'][] = 'galactus/maintenance_page';
+  $variables['#attached']['library'][] = 'galactus_gps/maintenance_page';
 }
 
 /**
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
-function galactus_preprocess_node(&$variables) {
+function galactus_gps_preprocess_node(&$variables) {
   // Remove the "Add new comment" link on teasers or when the comment form is
   // displayed on the page.
   if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
@@ -330,7 +330,7 @@ function galactus_preprocess_node(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for block.html.twig.
  */
-function galactus_preprocess_block(&$variables) {
+function galactus_gps_preprocess_block(&$variables) {
   // Add a clearfix class to system branding blocks.
   if ($variables['plugin_id'] == 'system_branding_block') {
     $variables['attributes']['class'][] = 'clearfix';
@@ -340,7 +340,7 @@ function galactus_preprocess_block(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  */
-function galactus_preprocess_menu(&$variables) {
+function galactus_gps_preprocess_menu(&$variables) {
   $variables['attributes']['class'][] = 'clearfix';
 }
 
@@ -349,7 +349,7 @@ function galactus_preprocess_menu(&$variables) {
  *
  * @see template_preprocess_field()
  */
-function galactus_preprocess_field(&$variables) {
+function galactus_gps_preprocess_field(&$variables) {
   $element = $variables['element'];
   if ($element['#field_type'] == 'taxonomy_term_reference') {
     $variables['title_attributes']['class'][] = 'field-label';
@@ -362,7 +362,7 @@ function galactus_preprocess_field(&$variables) {
 /**
  * Implements hook_form_alter() for forms.
  */
-function galactus_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+function galactus_gps_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
   $form_object = $form_state->getFormObject();
   if ($form_object instanceof ViewsForm && strpos($form_object->getBaseFormId(), 'views_form_media_library') === 0) {
     $form['#attributes']['class'][] = 'media-library-views-form';
@@ -384,7 +384,7 @@ function galactus_form_alter(array &$form, FormStateInterface $form_state, $form
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for page.html.twig.
  */
-function galactus_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function galactus_gps_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Get current node.
   if (($node = \Drupal::request()->attributes->get('node')) && (strpos($_SERVER['REQUEST_URI'], "revisions") == false)) {
     array_splice($suggestions, 1, 0, 'page__node_type__' . $node->getType());
@@ -400,7 +400,7 @@ function galactus_theme_suggestions_page_alter(array &$suggestions, array $varia
  * @todo Do this in the relevant template once
  *   https://www.drupal.org/project/drupal/issues/3088856 is resolved.
  */
-function galactus_preprocess_links__media_library_menu(array &$variables) {
+function galactus_gps_preprocess_links__media_library_menu(array &$variables) {
   foreach ($variables['links'] as &$link) {
     $link['link']['#options']['attributes']['class'][] = 'media-library-menu__link';
   }
@@ -409,7 +409,7 @@ function galactus_preprocess_links__media_library_menu(array &$variables) {
 /**
  * Implements hook_preprocess_image_widget().
  */
-function galactus_preprocess_image_widget(array &$variables) {
+function galactus_gps_preprocess_image_widget(array &$variables) {
   $data = &$variables['data'];
 
   // This prevents image widget templates from rendering preview container HTML

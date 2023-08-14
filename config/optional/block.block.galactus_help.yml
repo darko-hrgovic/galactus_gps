@@ -6,9 +6,9 @@ dependencies:
   module:
     - help
   theme:
-    - galactus
-id: galactus_help
-theme: galactus
+    - galactus_gps
+id: galactus_gps_help
+theme: galactus_gps
 region: help
 weight: -5
 provider: null

@@ -1,6 +1,6 @@
 (function () {
 
-  Drupal.behaviors.galactusStickyNav = {
+  Drupal.behaviors.galactus_gpsStickyNav = {
     attach: function(context, settings) {
       var navbar = document.getElementById("ubc7-unit-menu");
       var unitbar = document.getElementById("ubc7-unit");

@@ -1,5 +1,5 @@
-# Schema for the configuration files of the galactus theme.
+# Schema for the configuration files of the galactus_gps theme.
 
-galactus.settings:
+galactus_gps.settings:
   type: theme_settings
-  label: 'galactus settings'
+  label: 'galactus_gps settings'

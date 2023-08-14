@@ -10,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
-function galactus_form_system_theme_settings_alter(&$form, FormStateInterface &$form_state) {
+function galactus_gps_form_system_theme_settings_alter(&$form, FormStateInterface &$form_state) {
   // Move the default theme settings to our custom vertical tabs for core theme
   // settings.
   $form['core'] = [

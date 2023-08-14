@@ -13,7 +13,7 @@ to extend this one instead.
 # Composer Builds
 If you're using composer, add the project with:
 ```
-composer require ubc-web-services/galactus
+composer require ubc-web-services/galactus_gps
 ```
 
 # IE8 Support

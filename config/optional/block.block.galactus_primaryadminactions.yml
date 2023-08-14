@@ -4,9 +4,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - galactus
-id: galactus_primaryadminactions
-theme: galactus
+    - galactus_gps
+id: galactus_gps_primaryadminactions
+theme: galactus_gps
 region: content
 weight: -3
 provider: null

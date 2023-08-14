@@ -1,4 +1,4 @@
-# galactus.libraries.yml
+# galactus_gps.libraries.yml
 
 base:
   version: VERSION
@@ -158,7 +158,7 @@ clf-cdn-fw-wb:
     base:
       https://cdn.ubc.ca/clf/7.0.4/css/ubc-clf-full.min.css: { type: external, minified: true }
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Full-width, Blue on White
 clf-cdn-fw-bw:
@@ -167,7 +167,7 @@ clf-cdn-fw-bw:
     base:
       https://cdn.ubc.ca/clf/7.0.4/css/ubc-clf-full-bw.min.css: { type: external, minified: true }
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Full-width, White on Grey
 clf-cdn-fw-wg:
@@ -176,7 +176,7 @@ clf-cdn-fw-wg:
     base:
       https://cdn.ubc.ca/clf/7.0.4/css/ubc-clf-full-wg.min.css: { type: external, minified: true }
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Full-width, Grey on White
 clf-cdn-fw-gw:
@@ -185,7 +185,7 @@ clf-cdn-fw-gw:
     base:
       https://cdn.ubc.ca/clf/7.0.4/css/ubc-clf-full-gw.min.css: { type: external, minified: true }
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 ### Minimal CLF Versions ###
 
@@ -198,7 +198,7 @@ clf-fw-wb:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 
 # Full-width, Blue on White
@@ -210,7 +210,7 @@ clf-fw-bw:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Full-width, White on Grey
 clf-fw-wg:
@@ -221,7 +221,7 @@ clf-fw-wg:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Full-width, Grey on White
 clf-fw-gw:
@@ -232,7 +232,7 @@ clf-fw-gw:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Standard-width, White on Blue
 clf-sw-wb:
@@ -243,7 +243,7 @@ clf-sw-wb:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Standard-width, Blue on White
 clf-sw-bw:
@@ -254,7 +254,7 @@ clf-sw-bw:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Standard-width, White on Grey
 clf-sw-wg:
@@ -265,7 +265,7 @@ clf-sw-wg:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Standard-width, Grey on White
 clf-sw-gw:
@@ -276,7 +276,7 @@ clf-sw-gw:
     theme:
       css/clf.social-icons.css: {}
   dependencies:
-    - galactus/cdn-clf-js
+    - galactus_gps/cdn-clf-js
 
 # Local Version of CLF (all variants)
 clf-local:

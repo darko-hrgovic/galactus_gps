@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - galactus
-id: galactus_mainpagecontent
-theme: galactus
+    - galactus_gps
+id: galactus_gps_mainpagecontent
+theme: galactus_gps
 region: content
 weight: 0
 provider: null

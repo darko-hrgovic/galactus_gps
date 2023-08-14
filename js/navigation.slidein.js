@@ -1,6 +1,6 @@
 (function () {
 
-  Drupal.behaviors.galactusDrawer = {
+  Drupal.behaviors.galactus_gpsDrawer = {
     attach: function(context, settings) {
       // Primary drawer toggle.
       var pushTrigger = document.getElementsByClassName("drawer-toggle--primary");

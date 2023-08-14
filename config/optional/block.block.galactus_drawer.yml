@@ -8,9 +8,9 @@ dependencies:
   module:
     - system
   theme:
-    - galactus
-id: galactus_drawer
-theme: galactus
+    - galactus_gps
+id: galactus_gps_drawer
+theme: galactus_gps
 region: drawer
 weight: 0
 provider: null

@@ -9,28 +9,28 @@ generator: 'starterkit_theme:9.5.1'
 starterkit: true
 libraries:
   # this library is equivalent to classy/base, so we exclude it
-  # - galactus/base
-  - galactus/messages
+  # - galactus_gps/base
+  - galactus_gps/messages
   - core/normalize
-  - galactus/global
+  - galactus_gps/global
 
 libraries-extend:
   user/drupal.user:
-    - galactus/user
+    - galactus_gps/user
   core/drupal.dropbutton:
-    - galactus/dropbutton
+    - galactus_gps/dropbutton
   core/drupal.dialog:
-    - galactus/dialog
+    - galactus_gps/dialog
   file/drupal.file:
-    - galactus/file
+    - galactus_gps/file
   core/drupal.progress:
-    - galactus/progress
+    - galactus_gps/progress
   media/media_embed_ckeditor_theme:
-    - galactus/media_embed_ckeditor_theme
+    - galactus_gps/media_embed_ckeditor_theme
   media_library/view:
-    - galactus/media_library
+    - galactus_gps/media_library
   media_library/widget:
-    - galactus/media_library
+    - galactus_gps/media_library
 ckeditor_stylesheets:
   - css/components/media-embed-error.css
   - css/ckeditor-iframe.css
